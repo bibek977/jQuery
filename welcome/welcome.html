@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page jQuery</title>
+
+    <!-- <script src="../jquery-3.6.0.min.js"></script> -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="welcome"></div>
+
+    <div class="hello-world"></div>
+
+    <button  onclick="hideMe()">First</button>
+    <button class="hide">Second</button>
+
+    <script>
+        // Javascript
+        document.querySelector('.welcome').innerHTML = "Welcome to jQuery Tutorial Page";
+
+        // the button byJs
+        function hideMe() {
+            document.querySelector('.welcome').style.display = "none";
+        }
+
+        // Jquery for ready
+        $(document).ready(function(){
+            
+            // main code
+            $('.hello-world').text("This is written by using Jquery")
+            
+            // button by JQuery
+            $('.hide').click(function(){
+                // $('.hello-world').hide();
+                $('.hello-world').hide(2000);
+            })
+
+            // show with doubleClick
+            $('.hide').dblclick(function(){
+                // $('.hello-world').show();
+                $('.hello-world').show(2000);
+            })
+
+        })
+
+    </script>
+</body>
+</html>
